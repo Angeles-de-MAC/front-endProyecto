@@ -1,5 +1,16 @@
 import Image from "next/image";
 
+const CourseCard = ({ semester, title, professor, resources }: { semester: number; title: string; professor: string; resources: number }) => {
+  return (
+    <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+      <h3 className="text-lg font-semibold text-[#003366]">{title}</h3>
+      <p className="text-sm text-gray-600 dark:text-gray-400">Semester: {semester}</p>
+      <p className="text-sm text-gray-600 dark:text-gray-400">Professor: {professor}</p>
+      <p className="text-sm text-gray-600 dark:text-gray-400">Resources: {resources}</p>
+    </div>
+  );
+};
+
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -60,6 +71,41 @@ export default function Home() {
           </a>
         </div>
       </main>
+      <section className="p-8">
+        <h2 className="text-2xl font-bold text-[#003366] mb-6">Materias Destacadas</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <CourseCard
+            semester={1}
+            title="Cálculo Diferencial e Integral I"
+            professor="Dr. Roberto Hernández"
+            resources={45}
+          />
+          <CourseCard
+            semester={1}
+            title="Álgebra Superior I"
+            professor="Dra. María González"
+            resources={38}
+          />
+        </div>
+      </section>
     </div>
   );
 }
+
+<section className="p-8">
+  <h2 className="text-2xl font-bold text-[#003366] mb-6">Materias Destacadas</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <CourseCard 
+      semester={1}
+      title="Cálculo Diferencial e Integral I"
+      professor="Dr. Roberto Hernández"
+      resources={45}
+    />
+    <CourseCard 
+      semester={1}
+      title="Álgebra Superior I"
+      professor="Dra. María González"
+      resources={38}
+    />
+  </div>
+</section>
