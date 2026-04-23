@@ -1,5 +1,6 @@
 import styles from "./footer.module.css";
 import Link from "next/link";
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -9,7 +10,16 @@ export default function Footer() {
         {/* About */}
         <div className={styles.about}>
           <div className={styles.headerBlock}>
-            <h2 className={styles.logo}>MAC</h2>
+            <div className={styles.logoContainer}>
+                <Image
+                src="/Lo.png" 
+                alt="Logo MAC"
+                width={40}
+                height={40}
+                className={styles.logoImage}
+                />
+                <h2 className={styles.logo}>MAC</h2>
+            </div>
             <p className={styles.subtext}>Recursos Académicos</p>
           </div>
 
