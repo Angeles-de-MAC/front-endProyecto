@@ -1,0 +1,38 @@
+.seccion {
+  background-color: #f8f9fa; /* Gris muy claro para contrastar */
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.tituloSeccion {
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  font-size: 1.5rem;
+  color: #003366;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.botonVer {
+  margin-top: 3rem;
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.botonVer:hover {
+  background-color: #002244;
+}

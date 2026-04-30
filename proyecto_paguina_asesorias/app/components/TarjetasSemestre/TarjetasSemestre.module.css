@@ -1,0 +1,25 @@
+.contenedor {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Para mantener las 4 columnas de la imagen en pantallas grandes */
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
