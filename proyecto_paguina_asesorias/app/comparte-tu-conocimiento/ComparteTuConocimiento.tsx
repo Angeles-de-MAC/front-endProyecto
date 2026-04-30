@@ -1,4 +1,4 @@
-import styles from './page.module.css';
+import styles from './ComparteTuConocimiento.module.css';
 import { OptionCard } from './OptionCard';
 import { UploadForm } from './UploadForm';
 import { RiFile2Fill, RiFile2Line, RiSlideshowLine } from "@remixicon/react";
@@ -21,7 +21,7 @@ const shareYourKnowledgeOptions = [
     },
 ];
 
-export default function ShareYourKnowledgeAlt() {
+export default function ComparteTuConocimiento() {
     return (
         <main className={styles.main}>
             <div className={styles.content}>

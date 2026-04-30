@@ -1,4 +1,4 @@
-import styles from './page.module.css';
+import styles from './RecursosRecientes.module.css';
 import { FilterBar } from './FilterBar';
 import { ResourceCard } from './ResourceCard';
 import { RiFilePdfLine, RiSlideshowLine, RiLink } from "@remixicon/react";
@@ -105,7 +105,7 @@ const resources = [
     }
 ];
 
-export default function RecentResourcesAlt() {
+export default function RecursosRecientes() {
     return (
         <main className={styles.main}>
             <div className={styles.header}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { TarjetaMateria } from '../TarjetaMateria/TarjetaMateria';
-import styles from './TarjetasMaterias.module.css';
+import styles from './TarjetasMateria.module.css';
 
 export const TarjetasMaterias: React.FC = () => {
   const materias = [
