@@ -1,4 +1,3 @@
-
 import { TarjetasSemestre } from "./components/TarjetasSemestre/TarjetasSemestre";
 import { TarjetasMaterias } from "./components/TarjetasMateria/TarjetasMaterias";
 import RecursosRecientes from "./recursos-recientes/recursos-recientes";

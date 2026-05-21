@@ -1,10 +1,10 @@
-import * as React from "react"
-import { useRender } from "@base-ui/react/use-render"
+import * as React from "react";
+import { useRender } from "@base-ui/react/use-render";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export interface LargeProps extends React.ComponentPropsWithoutRef<"div"> {
-  render?: React.ReactElement
+  render?: React.ReactElement;
 }
 
 const Large = React.forwardRef<HTMLDivElement, LargeProps>(
@@ -17,9 +17,9 @@ const Large = React.forwardRef<HTMLDivElement, LargeProps>(
         ...props,
       },
       defaultTagName: "div",
-    })
-  }
-)
-Large.displayName = "Large"
+    });
+  },
+);
+Large.displayName = "Large";
 
-export { Large }
+export { Large };

@@ -1,10 +1,10 @@
-import * as React from "react"
-import { useRender } from "@base-ui/react/use-render"
+import * as React from "react";
+import { useRender } from "@base-ui/react/use-render";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export interface SmallProps extends React.ComponentPropsWithoutRef<"small"> {
-  render?: React.ReactElement
+  render?: React.ReactElement;
 }
 
 const Small = React.forwardRef<HTMLElement, SmallProps>(
@@ -17,9 +17,9 @@ const Small = React.forwardRef<HTMLElement, SmallProps>(
         ...props,
       },
       defaultTagName: "small",
-    })
-  }
-)
-Small.displayName = "Small"
+    });
+  },
+);
+Small.displayName = "Small";
 
-export { Small }
+export { Small };

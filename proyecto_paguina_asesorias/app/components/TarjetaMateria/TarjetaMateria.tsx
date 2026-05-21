@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './TarjetaMateria.module.css';
+import React from "react";
+import styles from "./TarjetaMateria.module.css";
 
 interface TarjetaMateriaProps {
   titulo: string;
@@ -8,7 +8,12 @@ interface TarjetaMateriaProps {
   semestre: number;
 }
 
-export const TarjetaMateria: React.FC<TarjetaMateriaProps> = ({ titulo, profesor, recursos, semestre }) => {
+export const TarjetaMateria: React.FC<TarjetaMateriaProps> = ({
+  titulo,
+  profesor,
+  recursos,
+  semestre,
+}) => {
   return (
     <div className={styles.tarjeta}>
       <div className={styles.header}>

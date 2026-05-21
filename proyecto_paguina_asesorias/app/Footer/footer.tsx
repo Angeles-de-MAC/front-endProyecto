@@ -1,24 +1,23 @@
 import styles from "./footer.module.css";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        
         {/* About */}
         <div className={styles.about}>
           <div className={styles.headerBlock}>
             <div className={styles.logoContainer}>
-                <Image
-                src="/Log.png" 
+              <Image
+                src="/Log.png"
                 alt="Logo MAC"
                 width={40}
                 height={40}
                 className={styles.logoImage}
-                />
-                <h2 className={styles.logo}>MAC</h2>
+              />
+              <h2 className={styles.logo}>MAC</h2>
             </div>
             <p className={styles.subtext}>Recursos Académicos</p>
           </div>
@@ -60,22 +59,16 @@ export default function Footer() {
           <ul className={styles.list}>
             <li className={styles.contactItem}>
               <span className={styles.label}>Correo:</span>
-              <a
-                href="mailto:angelesdemac@gmail.com"
-                className={styles.link}
-              >
+              <a href="mailto:angelesdemac@gmail.com" className={styles.link}>
                 angelesdemac@gmail.com
               </a>
             </li>
           </ul>
         </div>
-
       </div>
 
       <div className={styles.bottomBar}>
-        <p>
-          © {new Date().getFullYear()} MAC — Hecho en México.
-        </p>
+        <p>© {new Date().getFullYear()} MAC — Hecho en México.</p>
 
         <div className={styles.bottomLinks}>
           <p>Hecho por Angeles de mac</p>
@@ -84,4 +77,3 @@ export default function Footer() {
     </footer>
   );
 }
-

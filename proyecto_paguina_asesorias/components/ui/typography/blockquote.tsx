@@ -1,11 +1,10 @@
-import * as React from "react"
-import { useRender } from "@base-ui/react/use-render"
+import * as React from "react";
+import { useRender } from "@base-ui/react/use-render";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-export interface BlockquoteProps
-  extends React.ComponentPropsWithoutRef<"blockquote"> {
-  render?: React.ReactElement
+export interface BlockquoteProps extends React.ComponentPropsWithoutRef<"blockquote"> {
+  render?: React.ReactElement;
 }
 
 const Blockquote = React.forwardRef<HTMLQuoteElement, BlockquoteProps>(
@@ -18,9 +17,9 @@ const Blockquote = React.forwardRef<HTMLQuoteElement, BlockquoteProps>(
         ...props,
       },
       defaultTagName: "blockquote",
-    })
-  }
-)
-Blockquote.displayName = "Blockquote"
+    });
+  },
+);
+Blockquote.displayName = "Blockquote";
 
-export { Blockquote }
+export { Blockquote };

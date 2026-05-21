@@ -1,10 +1,10 @@
-import * as React from "react"
-import { useRender } from "@base-ui/react/use-render"
+import * as React from "react";
+import { useRender } from "@base-ui/react/use-render";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export interface ListProps extends React.ComponentPropsWithoutRef<"ul"> {
-  render?: React.ReactElement
+  render?: React.ReactElement;
 }
 
 const List = React.forwardRef<HTMLUListElement, ListProps>(
@@ -17,9 +17,9 @@ const List = React.forwardRef<HTMLUListElement, ListProps>(
         ...props,
       },
       defaultTagName: "ul",
-    })
-  }
-)
-List.displayName = "List"
+    });
+  },
+);
+List.displayName = "List";
 
-export { List }
+export { List };

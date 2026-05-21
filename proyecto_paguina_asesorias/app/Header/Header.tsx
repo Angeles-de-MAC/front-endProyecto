@@ -1,6 +1,5 @@
-
-import styles from './Header.module.css';
-import Image from 'next/image';
+import styles from "./Header.module.css";
+import Image from "next/image";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Header() {
@@ -18,14 +17,18 @@ export default function Header() {
           </div>
           <div>
             <p className={styles.title}>Recursos Académicos</p>
-            <p className={styles.subtitle}>Encuentra material de apoyo para tus estudios</p>
+            <p className={styles.subtitle}>
+              Encuentra material de apoyo para tus estudios
+            </p>
           </div>
         </div>
 
         <nav className={styles.nav}>
           <a href="#semestres">Semestres</a>
           <a href="#asesorias">Asesorías</a>
-          <a href="#subir-recurso" className={styles.cta}>Subir recurso</a>
+          <a href="#subir-recurso" className={styles.cta}>
+            Subir recurso
+          </a>
         </nav>
 
         <div className={styles.searchBox}>
