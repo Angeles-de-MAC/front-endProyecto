@@ -11,14 +11,15 @@ A continuación se muestra la estructura relacional que soporta la autenticació
 ```mermaid
 erDiagram
     USUARIO ||--o{ RECURSO : "sube / es autor"
-    USUARIO ||--o{ ASESORIA : "toma como estudiante"
     USUARIO ||--o{ ASESORIA : "imparte como asesor"
     USUARIO ||--o{ REGISTRO_DESCARGA : "realiza"
+    USUARIO ||--o{ ASESORIA_ESTUDIANTE : "se inscribe"
     
     MATERIA ||--o{ RECURSO : "pertenece"
     MATERIA ||--o{ ASESORIA : "se imparte"
     
     RECURSO ||--o{ REGISTRO_DESCARGA : "se registra"
+    ASESORIA ||--o{ ASESORIA_ESTUDIANTE : "tiene"
 
     USUARIO {
         uuid id PK
@@ -67,7 +68,6 @@ erDiagram
     ASESORIA {
         uuid id PK
         uuid asesor_id FK
-        uuid estudiante_id FK "nullable"
         uuid materia_id FK
         string tema_especifico
         timestamp fecha_hora
@@ -80,6 +80,13 @@ erDiagram
         text retroalimentacion_estudiante
         timestamp creado_at
         timestamp actualizado_at
+    }
+
+    ASESORIA_ESTUDIANTE {
+        uuid id PK
+        uuid asesoria_id FK
+        uuid estudiante_id FK
+        timestamp inscrito_at
     }
 ```
 
@@ -160,7 +167,6 @@ Gestiona el agendamiento e impartición de asesorías académicas personalizadas
 | :--- | :--- | :--- | :--- |
 | `id` | UUID | Primary Key, Default UUIDv4 | Identificador de la sesión de asesoría. |
 | `asesor_id` | UUID | FOREIGN KEY, NOT NULL | Usuario con rol `asesor` que impartirá la sesión. |
-| `estudiante_id` | UUID | FOREIGN KEY, NULLABLE | Usuario que reserva la sesión (nulo si el bloque está disponible). |
 | `materia_id` | UUID | FOREIGN KEY, NOT NULL | Asignatura en la cual se apoya al estudiante. |
 | `tema_especifico` | VARCHAR(255) | NOT NULL | Tema concreto solicitado (ej. *Inducción Matemática*, *Punteros en C*). |
 | `fecha_hora` | TIMESTAMP | NOT NULL | Fecha y hora exacta de inicio de la sesión. |
@@ -173,6 +179,18 @@ Gestiona el agendamiento e impartición de asesorías académicas personalizadas
 | `retroalimentacion_estudiante`| TEXT | NULLABLE | Comentarios complementarios sobre la utilidad de la sesión. |
 | `creado_at` | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP | Fecha de registro de disponibilidad. |
 | `actualizado_at` | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP | Última edición de estado o detalles. |
+
+---
+
+### 2.6 Entidad `ASESORIA_ESTUDIANTE`
+Tabla intermedia que gestiona la inscripción de uno o varios estudiantes a una sesión de asesoría (relación muchos a muchos).
+
+| Campo | Tipo | Restricciones | Descripción |
+| :--- | :--- | :--- | :--- |
+| `id` | UUID | Primary Key, Default UUIDv4 | Identificador único del registro de inscripción. |
+| `asesoria_id` | UUID | FOREIGN KEY, NOT NULL | Relación con la tabla `ASESORIA`. |
+| `estudiante_id` | UUID | FOREIGN KEY, NOT NULL | Relación con la tabla `USUARIO` que representa al estudiante inscrito. |
+| `inscrito_at` | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP | Fecha de registro de la inscripción del estudiante a la asesoría. |
 
 ---
 
@@ -255,10 +273,13 @@ Ejecutado cuando un estudiante hace clic en agendar sobre el bloque de disponibi
     "id": "992a01fb-2234-4b53-b992-0b2a7593c21a",
     "nombre": "Ana Sofía García"
   },
-  "estudiante": {
-    "id": "e44d320b-22fa-48ef-be64-81d2df0f0322",
-    "nombre": "Juan Pérez Soler"
-  }
+  "estudiantes": [
+    {
+      "id": "e44d320b-22fa-48ef-be64-81d2df0f0322",
+      "nombre": "Juan Pérez Soler",
+      "inscrito_at": "2026-05-21T07:45:00Z"
+    }
+  ]
 }
 ```
 
