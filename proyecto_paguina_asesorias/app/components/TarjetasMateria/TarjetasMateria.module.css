@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+:global(.dark) .seccion {
+  background-color: transparent;
+}
+
 .tituloSeccion {
   text-align: left;
   max-width: 1200px;
@@ -11,6 +15,10 @@
   font-size: 1.5rem;
   color: #003366;
   font-weight: bold;
+}
+
+:global(.dark) .tituloSeccion {
+  color: #dbeafe;
 }
 
 .grid {
@@ -35,4 +43,12 @@
 
 .botonVer:hover {
   background-color: #002244;
+}
+
+:global(.dark) .botonVer {
+  background-color: #1d4ed8;
+}
+
+:global(.dark) .botonVer:hover {
+  background-color: #2563eb;
 }

@@ -1,14 +1,16 @@
 .tarjeta {
-  border: 2px solid #D4AF37; /* Color dorado similar a la imagen */
+  border: 2px solid #d4af37; /* Color dorado similar a la imagen */
   border-radius: 12px;
   padding: 2rem;
-  background-color: #ffffff;
+  background-color: var(--card, #ffffff);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   position: relative;
   min-width: 150px;
 }
@@ -37,4 +39,25 @@
   right: 10px;
   font-size: 0.8rem;
   color: #ccc;
+}
+
+:global(.dark) .tarjeta {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+:global(.dark) .tarjeta:hover {
+  border-color: #d4af37;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+:global(.dark) .numero {
+  color: #f4f4f5;
+}
+
+:global(.dark) .texto {
+  color: #a1a1aa;
+}
+
+:global(.dark) .icono {
+  color: #52525b;
 }

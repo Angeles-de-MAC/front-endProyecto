@@ -1,12 +1,30 @@
-import React from 'react';
-import { TarjetaMateria } from '../TarjetaMateria/TarjetaMateria';
-import styles from './TarjetasMateria.module.css';
+import React from "react";
+import { TarjetaMateria } from "../TarjetaMateria/TarjetaMateria";
+import styles from "./TarjetasMateria.module.css";
 
 export const TarjetasMaterias: React.FC = () => {
   const materias = [
-    { id: 1, titulo: "Cálculo Diferencial e Integral I", profesor: "Dr. Roberto Hernández", recursos: 45, semestre: 1 },
-    { id: 2, titulo: "Álgebra Superior I", profesor: "Dra. Maria González", recursos: 38, semestre: 1 },
-    { id: 3, titulo: "Geometría Analítica I", profesor: "Dr. Carlos Ramírez", recursos: 32, semestre: 1 },
+    {
+      id: 1,
+      titulo: "Cálculo Diferencial e Integral I",
+      profesor: "Dr. Roberto Hernández",
+      recursos: 45,
+      semestre: 1,
+    },
+    {
+      id: 2,
+      titulo: "Álgebra Superior I",
+      profesor: "Dra. Maria González",
+      recursos: 38,
+      semestre: 1,
+    },
+    {
+      id: 3,
+      titulo: "Geometría Analítica I",
+      profesor: "Dr. Carlos Ramírez",
+      recursos: 32,
+      semestre: 1,
+    },
   ];
 
   return (
