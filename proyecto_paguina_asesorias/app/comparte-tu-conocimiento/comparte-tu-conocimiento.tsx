@@ -34,8 +34,8 @@ const shareYourKnowledgeOptions = [
 export default function ShareYourKnowledge() {
     return (
         <>
-            <main className="p-4 flex gap-8 md:flex-row flex-col">
-                <div className="flex flex-col basis-4/5">
+            <main className="p-8 grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-[1200px] mx-auto w-full">
+                <div className="flex flex-col lg:col-span-3">
                     <H1 className="text-blue-900 dark:text-blue-100 text-center xs:text-start">Comparte tu conocimiento</H1>
 
                     <P className="text-balance text-foreground/60 text-lg">Sube tus apuntes, presentaciones, papers o enlaces útiles para ayudar a otros estudiantes de la comunidad MAC</P>
@@ -59,7 +59,7 @@ export default function ShareYourKnowledge() {
                     </div>
 
                 </div>
-                <div className="flex border-yellow-600 border-2 p-6 bg-blue-700/5 dark:bg-blue-950/20 rounded-xl border-dashed basis-1/5 min-w-xs">
+                <div className="flex border-yellow-600 border-2 p-6 bg-blue-700/5 dark:bg-blue-950/20 rounded-xl border-dashed lg:col-span-1 min-w-0">
                     {/* upload form */}
                     <div className="flex flex-col gap-4 w-full">
 

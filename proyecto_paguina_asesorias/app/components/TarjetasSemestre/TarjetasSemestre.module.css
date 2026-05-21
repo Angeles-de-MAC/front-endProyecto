@@ -1,5 +1,5 @@
 .contenedor {
-  padding: 4rem 1.5rem;
+  padding: 4rem 2rem;
   width: min(100%, 1200px);
   margin: 0 auto 2rem;
 }
@@ -9,6 +9,10 @@
   font-weight: bold;
   color: #003366;
   margin-bottom: 2rem;
+}
+
+:global(.dark) .titulo {
+  color: #dbeafe;
 }
 
 .grid {

@@ -1,5 +1,5 @@
 .tarjeta {
-  background: white;
+  background: var(--card, white);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -68,4 +68,21 @@
   align-items: center;
   gap: 8px;
   margin-bottom: 0.5rem;
+}
+
+:global(.dark) .tarjeta {
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+:global(.dark) .header {
+  background-color: #0d253f;
+}
+
+:global(.dark) .titulo {
+  color: #f4f4f5;
+}
+
+:global(.dark) .info {
+  color: #a1a1aa;
 }

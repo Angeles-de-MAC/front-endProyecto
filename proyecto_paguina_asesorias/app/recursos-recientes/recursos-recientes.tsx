@@ -134,55 +134,53 @@ export default function RecentResources() {
 
     return (
         <>
-            <main className="flex flex-col p-8 gap-8">
-                <div className="flex flex-row items-center gap-8 justify-between">
+            <main className="flex flex-col p-8 gap-8 max-w-[1200px] mx-auto w-full">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 w-full">
                     <H1 className="text-left text-blue-900 dark:text-blue-100">
                         Recursos Recientes
                     </H1>
 
-                    <FieldSet>
-                        <FieldGroup className="flex-row items-center gap-4">
-                            <Field className="min-w-fit" orientation="horizontal">
-                                <FieldLabel>Tipo de recurso</FieldLabel>
-                                <Select value={selectedType} onValueChange={(val) => setSelectedType(val || "all")}>
-                                    <SelectTrigger className="bg-background min-w-fit">
-                                        <SelectValue placeholder="Todos los tipos" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        <SelectGroup>
-                                            <SelectItem value="all">Todos los tipos</SelectItem>
-                                            <SelectItem value="PDF">PDF (Apuntes/Artículo)</SelectItem>
-                                            <SelectItem value="PPT">PPT (Presentación)</SelectItem>
-                                            <SelectItem value="LINK">Enlace (Video/Web)</SelectItem>
-                                            <SelectItem value="CODE">Código (Script/Código)</SelectItem>
-                                        </SelectGroup>
-                                    </SelectContent>
-                                </Select>
-                            </Field>
+                    <div className="flex flex-row flex-wrap items-center gap-4">
+                        <div className="flex flex-row items-center gap-2">
+                            <span className="text-sm font-semibold text-blue-900 dark:text-zinc-300 whitespace-nowrap">Tipo de recurso:</span>
+                            <Select value={selectedType} onValueChange={(val) => setSelectedType(val || "all")}>
+                                <SelectTrigger className="bg-background w-[180px]">
+                                    <SelectValue placeholder="Todos los tipos" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectGroup>
+                                        <SelectItem value="all">Todos los tipos</SelectItem>
+                                        <SelectItem value="PDF">PDF (Apuntes/Artículo)</SelectItem>
+                                        <SelectItem value="PPT">PPT (Presentación)</SelectItem>
+                                        <SelectItem value="LINK">Enlace (Video/Web)</SelectItem>
+                                        <SelectItem value="CODE">Código (Script/Código)</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
+                        </div>
 
-                            <Field className="min-w-fit" orientation="horizontal">
-                                <FieldLabel>Semestre</FieldLabel>
-                                <Select value={selectedSemester} onValueChange={(val) => setSelectedSemester(val || "all")}>
-                                    <SelectTrigger className="bg-background min-w-fit">
-                                        <SelectValue placeholder="Todos los semestres" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        <SelectGroup>
-                                            <SelectItem value="all">Todos los semestres</SelectItem>
-                                            <SelectItem value="1">Semestre 1</SelectItem>
-                                            <SelectItem value="2">Semestre 2</SelectItem>
-                                            <SelectItem value="3">Semestre 3</SelectItem>
-                                            <SelectItem value="4">Semestre 4</SelectItem>
-                                            <SelectItem value="5">Semestre 5</SelectItem>
-                                            <SelectItem value="6">Semestre 6</SelectItem>
-                                            <SelectItem value="7">Semestre 7</SelectItem>
-                                            <SelectItem value="8">Semestre 8</SelectItem>
-                                        </SelectGroup>
-                                    </SelectContent>
-                                </Select>
-                            </Field>
-                        </FieldGroup>
-                    </FieldSet>
+                        <div className="flex flex-row items-center gap-2">
+                            <span className="text-sm font-semibold text-blue-900 dark:text-zinc-300 whitespace-nowrap">Semestre:</span>
+                            <Select value={selectedSemester} onValueChange={(val) => setSelectedSemester(val || "all")}>
+                                <SelectTrigger className="bg-background w-[180px]">
+                                    <SelectValue placeholder="Todos los semestres" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectGroup>
+                                        <SelectItem value="all">Todos los semestres</SelectItem>
+                                        <SelectItem value="1">Semestre 1</SelectItem>
+                                        <SelectItem value="2">Semestre 2</SelectItem>
+                                        <SelectItem value="3">Semestre 3</SelectItem>
+                                        <SelectItem value="4">Semestre 4</SelectItem>
+                                        <SelectItem value="5">Semestre 5</SelectItem>
+                                        <SelectItem value="6">Semestre 6</SelectItem>
+                                        <SelectItem value="7">Semestre 7</SelectItem>
+                                        <SelectItem value="8">Semestre 8</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
+                        </div>
+                    </div>
                 </div>
 
                 {error && (
