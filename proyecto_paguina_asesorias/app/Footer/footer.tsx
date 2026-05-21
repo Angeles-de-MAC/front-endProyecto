@@ -59,9 +59,9 @@ export default function Footer() {
           <ul className={styles.list}>
             <li className={styles.contactItem}>
               <span className={styles.label}>Correo:</span>
-              <a href="mailto:angelesdemac@gmail.com" className={styles.link}>
+              <Link href="mailto:angelesdemac@gmail.com" className={styles.link}>
                 angelesdemac@gmail.com
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
