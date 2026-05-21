@@ -1,5 +1,6 @@
 import styles from "./Header.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Header() {
@@ -24,11 +25,11 @@ export default function Header() {
         </div>
 
         <nav className={styles.nav}>
-          <a href="#semestres">Semestres</a>
-          <a href="#asesorias">Asesorías</a>
-          <a href="#subir-recurso" className={styles.cta}>
+          <Link href="/#semestres">Semestres</Link>
+          <Link href="/asesorias">Asesorías</Link>
+          <Link href="/#subir-recurso" className={styles.cta}>
             Subir recurso
-          </a>
+          </Link>
         </nav>
 
         <div className={styles.searchBox}>

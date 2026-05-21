@@ -12,7 +12,7 @@ export const TarjetasSemestre: React.FC = () => {
   };
 
   return (
-    <section className={styles.contenedor}>
+    <section className={styles.contenedor} id="semestres">
       <h2 className={styles.titulo}>Selecciona tu Semestre</h2>
       <div className={styles.grid}>
         {semestres.map((num) => (

@@ -51,7 +51,7 @@ const shareYourKnowledgeOptions = [
 export default function ShareYourKnowledge() {
   return (
     <>
-      <main className="p-8 grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-[1200px] mx-auto w-full">
+      <main id="subir-recurso" className="p-8 grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-[1200px] mx-auto w-full">
         <div className="flex flex-col lg:col-span-3">
           <H1 className="text-blue-900 dark:text-blue-100 text-center xs:text-start">
             Comparte tu conocimiento
