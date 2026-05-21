@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Field, FieldGroup, FieldSet } from "@/components/ui/field";
+import { Field, FieldGroup, FieldLabel, FieldSet } from "@/components/ui/field";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { H1 } from "@/components/ui/typography/" 
 import { RiFilePdfLine, RiSlideshowLine, RiLink, RiDownloadLine, RiDownload2Line } from "@remixicon/react";
@@ -117,7 +117,8 @@ export default function RecentResources() {
 
                     <FieldSet>
                         <FieldGroup className="flex-row items-center gap-4">
-                            <Field className="min-w-fit">
+                            <Field className="min-w-fit" orientation="horizontal">
+                                <FieldLabel>Tipo de recurso</FieldLabel>
                                 <Select>
                                     <SelectTrigger className="bg-background min-w-fit">
                                         <SelectValue placeholder="Todos los tipos" />
@@ -132,7 +133,8 @@ export default function RecentResources() {
                                 </Select>
                             </Field>
 
-                            <Field className="min-w-fit">
+                            <Field className="min-w-fit" orientation="horizontal">
+                                <FieldLabel>Semestre</FieldLabel>
                                 <Select>
                                     <SelectTrigger className="bg-background min-w-fit">
                                         <SelectValue placeholder="Todos los semestres" />
