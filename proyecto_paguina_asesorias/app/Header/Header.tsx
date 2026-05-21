@@ -1,19 +1,21 @@
 
 import styles from './Header.module.css';
 import Image from 'next/image';
+import { ThemeToggle } from "@/components/theme-toggle";
+
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.brand}>
           <div className={styles.logo}>
-  <Image
-    src="/Log.png"
-    alt="Logo"
-    fill
-    className={styles.logoImage}
-  />
-</div>
+            <Image
+              src="/Log.png"
+              alt="Logo"
+              fill
+              className={styles.logoImage}
+            />
+          </div>
           <div>
             <p className={styles.title}>Recursos Académicos</p>
             <p className={styles.subtitle}>Encuentra material de apoyo para tus estudios</p>
@@ -33,6 +35,7 @@ export default function Header() {
             aria-label="Buscar recursos"
           />
           <button type="button">Buscar</button>
+          <ThemeToggle />
         </div>
       </div>
     </header>
