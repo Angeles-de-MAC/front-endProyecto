@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { TarjetaSemestre } from '../TarjetaSemestre/TarjetaSemestre.module';
 import styles from './TarjetasSemestre.module.css';
