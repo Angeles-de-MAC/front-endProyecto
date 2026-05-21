@@ -12,7 +12,7 @@ export default function Footer() {
           <div className={styles.headerBlock}>
             <div className={styles.logoContainer}>
                 <Image
-                src="/Lo.png" 
+                src="/Log.png" 
                 alt="Logo MAC"
                 width={40}
                 height={40}
